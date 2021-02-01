@@ -61,7 +61,7 @@ class SearchResults():
         self.albums = albums
         self.album_track_map = album_track_map
 
-scope = "user-library-read,user-follow-read"
+scope = "user-library-read,user-follow-read,user-read-playback-state,user-modify-playback-state"
 
 DATASTORE = datastore.Datastore()
 
