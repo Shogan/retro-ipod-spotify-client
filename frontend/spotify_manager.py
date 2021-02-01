@@ -133,6 +133,10 @@ def refresh_devices():
             print(item['name'])
             device = UserDevice(item['id'], item['name'], item['is_active'])
             DATASTORE.setUserDevice(device)
+        else:
+            print(item['name'])
+            device = UserDevice(item['id'], item['name'], item['is_active'])
+            DATASTORE.setUserDevice(device)
 
 def parse_album(album):
     artist = album['artists'][0]['name']
