@@ -27,13 +27,54 @@ UDP_PORT = 9090
 
 DIVIDER_HEIGHT = 3
 
-UP_KEY_CODE = 8320768 if platform == "darwin" else 111
-DOWN_KEY_CODE = 8255233 if platform == "darwin" else 116
-LEFT_KEY_CODE = 8124162 if platform == "darwin" else 113
-RIGHT_KEY_CODE = 8189699 if platform == "darwin" else 114
-PREV_KEY_CODE = 2818092 if platform == "darwin" else 0
-NEXT_KEY_CODE = 3080238 if platform == "darwin" else 0
-PLAY_KEY_CODE = 3211296 if platform == "darwin" else 0
+if platform == "darwin":
+    UP_KEY_CODE = 8320768
+elif platform == "linux":
+    UP_KEY_CODE = 104
+else:
+    UP_KEY_CODE = 111
+
+if platform == "darwin":
+    DOWN_KEY_CODE = 8255233
+elif platform == "linux":
+    DOWN_KEY_CODE = 98
+else:
+    DOWN_KEY_CODE = 116
+
+if platform == "darwin":
+    LEFT_KEY_CODE = 8124162
+elif platform == "linux":
+    LEFT_KEY_CODE = 100
+else:
+    LEFT_KEY_CODE = 113
+
+if platform == "darwin":
+    RIGHT_KEY_CODE = 8189699
+elif platform == "linux":
+    RIGHT_KEY_CODE = 102
+else:
+    RIGHT_KEY_CODE = 114
+
+if platform == "darwin":
+    PREV_KEY_CODE = 2818092
+elif platform == "linux":
+    PREV_KEY_CODE = 33
+else:
+    PREV_KEY_CODE = 0
+
+if platform == "darwin":
+    NEXT_KEY_CODE = 3080238
+elif platform == "linux":
+    NEXT_KEY_CODE = 57
+else:
+    NEXT_KEY_CODE = 0
+
+if platform == "darwin":
+    PLAY_KEY_CODE = 3211296
+elif platform == "linux":
+    PLAY_KEY_CODE = 36
+else:
+    PLAY_KEY_CODE = 0
 
 SCREEN_TIMEOUT_SECONDS = 60
 
